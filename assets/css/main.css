@@ -1,0 +1,32 @@
+nav {
+  height: 80px;
+  width: 100%;
+  background-color: #C2185B;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 30px;
+}
+nav a p {
+  background-color: #c21c82;
+}
+
+nav {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+  color: royalblue;
+  font-size: 20px;
+}
+
+.texto-tutiulo {
+  color: red;
+  font-size: 30px;
+}
+
+/*# sourceMappingURL=main.css.map */
