@@ -1,0 +1,106 @@
+/*Mixins*/
+
+@mixin container($height, $width, $bg-color){
+    height: $height;
+    width: $width;
+    background-color: $bg-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ /*media sm*/
+.container-sm{
+    @include container(150px, 200px, red);
+}
+
+ /*media md*/
+.container-md{
+    @include container(200px, 250px, blue);
+}
+
+/*media lg*/
+.container-lg{
+    @include container(250px, 300px, green);
+}
+
+
+/*Herencia*/
+
+%button-p{
+    height: 50px;
+    width: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button-warning{
+    @extend %button-p;
+    background-color: yellow;
+}
+
+.button-save{
+    @extend %button-p;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin container ($height, $width:500px, $bg-color){
+//     height: $height;
+//     width:$width;
+//     background-color: $bg-color;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// } 
+
+// .container-sm{
+//     @include container(100px, 200px , red)
+// }
+
+// .container-md{
+//     @include container(150px, 250px , blue)
+// }
+
+// .container-lg{
+//     @include container(250px, 350px , green)
+// }
+
+// %button{
+//     height: 50px;
+//     width: 80px;
+//     text-align: center;
+//     border-radius: 5px;
+// }
+
+// .button-warning{
+//     @extend %button;
+//     background-color: darkgoldenrod;
+//     color:red;
+// }
+
+// .button-save{
+//     @extend %button;
+//     background-color: green;
+//     color:black;
+// }
