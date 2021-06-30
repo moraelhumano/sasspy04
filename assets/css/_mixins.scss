@@ -1,28 +1,85 @@
 /*Mixins*/
 
-@mixin container($height, $width, $bg-color){
+@mixin container($height, $width, $bg-color, $justify-content){
     height: $height;
     width: $width;
     background-color: $bg-color;
     display: flex;
+    justify-content: $justify-content;
+    align-items: center; 
+
+}
+
+.container{
+    height: 300px;
+    width: 300px;
+    background-color: $primary-color;
     justify-content: center;
-    align-items: center;
 }
 
- /*media sm*/
-.container-sm{
-    @include container(150px, 200px, red);
+.card{
+    height: 400px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    padding: 30px; 
+
+    h2{
+        color:white;
+        font-size: 25px;
+    }
+
+    h2:hover{
+        color: red;
+        font-size: 30px;
+    }
+
+    hr{
+        border: solid 2px grey; 
+        width: 100%;
+    }
+
+    p{
+        color: white;
+        font-size: 20px;
+    }
+
+
+    div{
+ 
+      
+        a{  
+            margin-right: 15px;
+            color: blue;
+            font-size: 25px;
+        }
+
+        a:hover{  
+            margin-right: 15px;
+            color: yellow;
+            font-size: 25px;
+        }
+    }
+
+    
+
+
 }
 
- /*media md*/
-.container-md{
-    @include container(200px, 250px, blue);
-}
 
-/*media lg*/
-.container-lg{
-    @include container(250px, 300px, green);
-}
+
+
+
+
+
+
+// .container{
+//     background-color: $primary-color;
+//     height: 300px;
+//     width: 200px;
+// }
+
 
 
 /*Herencia*/

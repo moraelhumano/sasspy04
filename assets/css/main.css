@@ -30,34 +30,46 @@ nav a {
 }
 
 /*Mixins*/
-/*media sm*/
-.container-sm {
-  height: 150px;
-  width: 200px;
-  background-color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*media md*/
-.container-md {
-  height: 200px;
-  width: 250px;
-  background-color: blue;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/*media lg*/
-.container-lg {
-  height: 250px;
+.container {
+  height: 300px;
   width: 300px;
-  background-color: green;
-  display: flex;
+  background-color: #C2185B;
   justify-content: center;
-  align-items: center;
+}
+
+.card {
+  height: 400px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #C2185B;
+  padding: 30px;
+}
+.card h2 {
+  color: white;
+  font-size: 25px;
+}
+.card h2:hover {
+  color: red;
+  font-size: 30px;
+}
+.card hr {
+  border: solid 2px grey;
+  width: 100%;
+}
+.card p {
+  color: white;
+  font-size: 20px;
+}
+.card div a {
+  margin-right: 15px;
+  color: blue;
+  font-size: 25px;
+}
+.card div a:hover {
+  margin-right: 15px;
+  color: yellow;
+  font-size: 25px;
 }
 
 /*Herencia*/
@@ -74,6 +86,52 @@ nav a {
 
 .button-save {
   background-color: green;
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) {
+  /*media sm*/
+  .container-sm {
+    height: 150px;
+    width: 200px;
+    background-color: pink;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+}
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) {
+  .container-md {
+    height: 300px;
+    width: 250px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+  }
+}
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) {
+  /*media lg*/
+  .container-lg {
+    height: 250px;
+    width: 300px;
+    background-color: green;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

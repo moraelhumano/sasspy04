@@ -1,0 +1,48 @@
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+
+@media (min-width: 320px) {
+  
+    /*media sm*/
+    .container-sm{
+    @include container(150px, 200px, pink, left);  
+    }
+
+ }
+
+
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) {  
+    .container-md{
+        @include container(300px, 250px, blue,center);
+        border-radius: 20px;
+    }
+  }
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) {
+  
+    /*media lg*/
+    .container-lg{
+        @include container(250px, 300px, green,flex-end); 
+    }
+    
+  }
+
+
+
+
+  
